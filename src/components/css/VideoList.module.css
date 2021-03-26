@@ -1,0 +1,32 @@
+.list {
+  width: 50%;
+  margin-bottom: 0.4em;
+  padding: 0.2rem;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  box-shadow: 3px 3px 3px 0 lightgray;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+.division {
+  margin-left: 8px;
+}
+
+.title {
+  font-size: 12px;
+}
+
+.channel,
+.title {
+  margin: 0;
+}
