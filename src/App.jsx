@@ -15,8 +15,7 @@ class App extends Component {
     };
 
     fetch(
-      "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=26&key=AIzaSyAXoOeGeRjHNNe8F-UttAM1JkUBLOVRxxU",
-      requestOptions
+      "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=26&key='';
     )
       .then((response) => response.json())
       .then((result) => {
