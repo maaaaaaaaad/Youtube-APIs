@@ -1,4 +1,4 @@
-class Youtube {
+class YoutubeFetch {
   constructor(key) {
     this.key = key;
     this.getRequestOptions = {
@@ -25,4 +25,4 @@ class Youtube {
     return result_1.items.map((item) => ({ ...item, id: item.id.videoId }));
   }
 }
-export default Youtube;
+export default YoutubeFetch;

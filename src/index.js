@@ -2,12 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import Youtube from "./service/youtube";
+import YoutubeAxios from "./service/youtube-axios";
 
-const youtube = new Youtube(process.env.REACT_APP_YOUTUBE_API_KEY);
+const youtubeAx = new YoutubeAxios(process.env.REACT_APP_YOUTUBE_API_KEY);
 ReactDOM.render(
   <React.StrictMode>
-    <App youtube={youtube} />
+    <App youtube={youtubeAx} />
   </React.StrictMode>,
   document.getElementById("root")
 );

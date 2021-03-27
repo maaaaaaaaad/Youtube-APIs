@@ -32,6 +32,9 @@ class App extends Component {
   };
 
   reload = () => {
+    this.props.youtube
+      .mostPopular() //
+      .then((result) => this.setState({ videos: result }));
     this.setState({ selectedVideo: null });
   };
 
