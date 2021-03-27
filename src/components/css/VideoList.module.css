@@ -12,6 +12,7 @@
   box-shadow: 3px 3px 3px 0 lightgray;
   cursor: pointer;
   transition: all 0.2s ease-in;
+  will-change: transform;
 }
 
 .container:hover {
