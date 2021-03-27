@@ -20,17 +20,25 @@ class App extends Component {
   enter = (text) => {
     this.props.youtube
       .search(text) //
-      .then((result) => this.setState({ videos: result }));
+      .then((result) => {
+        this.setState({ videos: result });
+        this.setState({ selectedVideo: null });
+      });
   };
 
   videoClick = (data) => {
+    window.scroll(0, 0);
     this.setState({ selectedVideo: data });
+  };
+
+  reload = () => {
+    this.setState({ selectedVideo: null });
   };
 
   render() {
     return (
       <>
-        <Search userEnter={this.enter}></Search>
+        <Search userEnter={this.enter} reload={this.reload}></Search>
         {this.state.selectedVideo && (
           <View video={this.state.selectedVideo}></View>
         )}

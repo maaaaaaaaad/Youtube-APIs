@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styles from "./css/Search.module.css";
+import dolce from "./img/dolce-01.jpg";
 
 class Search extends Component {
   formRef = React.createRef();
@@ -16,14 +17,20 @@ class Search extends Component {
       <form ref={this.formRef} className={styles.form} onSubmit={this.onSubmit}>
         <div className={styles.inputSection}>
           <span className={styles.title}>
-            WOONGTUBE
+            <img
+              className={styles.dolce}
+              src={dolce}
+              alt="DOLCE"
+              onClick={this.props.reload}
+            />
+            DOLCE_TUBE
             <input
               ref={this.inputRef}
               className={styles.input}
               type="text"
               placeholder="Search..."
             />
-            <input className={styles.submit} type="submit" value="Search" />
+            <input className={styles.submit} type="submit" value="Q" />
           </span>
         </div>
       </form>
