@@ -1,8 +1,5 @@
 .form {
   width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 99;
   padding: 10px;
   background-color: black;
 }

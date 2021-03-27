@@ -2,11 +2,14 @@ import React, { Component } from "react";
 import styles from "./css/VideoList.module.css";
 
 class VideoList extends Component {
+  click = () => {
+    this.props.onClick(this.props.item);
+  };
   render() {
     const { itemTitle, itemThumbnails, itemChannelTitle } = this.props;
     return (
       <li className={styles.list}>
-        <div className={styles.container}>
+        <div className={styles.container} onClick={this.click}>
           <img
             className={styles.thumbnail}
             src={itemThumbnails}
